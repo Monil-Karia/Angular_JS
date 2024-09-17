@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novell Services Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="radio"], .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-group .checkbox-group {
+            display: flex;
+            gap: 10px;
+        }
+        .button-group {
+            margin-top: 15px;
+        }
+        .button-group button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Novell Services Login Form</h1>
+
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City of Employment:</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+
+        <div class="form-group">
+            <label for="webserver">Web Server:</label>
+            <select id="webserver" name="webserver" required>
+                <option value="">Select Web Server</option>
+                <option value="apache">Apache</option>
+                <option value="nginx">Nginx</option>
+                <option value="iis">IIS</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Please specify your role:</label>
+            <input type="radio" id="admin" name="role" value="Admin" required>
+            <label for="admin">Admin</label>
+            <input type="radio" id="engineer" name="role" value="Engineer">
+            <label for="engineer">Engineer</label>
+            <input type="radio" id="manager" name="role" value="Manager">
+            <label for="manager">Manager</label>
+            <input type="radio" id="guest" name="role" value="Guest">
+            <label for="guest">Guest</label>
+        </div>
+
+        <div class="form-group">
+            <label>Single Sign-on to the following:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="mail" name="sso" value="Mail">
+                <label for="mail">Mail</label>
+                <input type="checkbox" id="payroll" name="sso" value="Payroll">
+                <label for="payroll">Payroll</label>
+                <input type="checkbox" id="selfservice" name="sso" value="Self-service">
+                <label for="selfservice">Self-service</label>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button type="button" onclick="login()">Login</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
