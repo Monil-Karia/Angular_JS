@@ -1,0 +1,28 @@
+<app-employee-table></app-employee-table>
+<h2>Temperature Converter</h2>
+
+<div>
+  <label for="celsius">Celsius:</label>
+  <input type="number" [(ngModel)]="celsius" id="celsius" (input)="updateFahrenheit()" />
+  <p>Fahrenheit: {{ celsius | temperaturePipe:'CtoF' }}</p>
+</div>
+
+<div>
+  <label for="fahrenheit">Fahrenheit:</label>
+  <input type="number" [(ngModel)]="fahrenheit" id="fahrenheit" (input)="updateCelsius()" />
+  <p>Celsius: {{ fahrenheit | temperaturePipe:'FtoC' }}</p>
+</div>
+
+<h2>String Reverser</h2>
+
+<input type="text" [(ngModel)]="inputString" placeholder="Enter a string" />
+<p>Reversed String: {{ inputString | reverse }}</p>
+
+
+<!-- <p>{{title}}</p>
+<p>{{name}}</p>  -->
+<!-- {{helloMessage()}} -->
+<!-- <app-user></app-user> -->
+<!-- <div class="app-user"><div> -->
+<!-- <div app-user></div> -->
+<!-- <app-inline></app-inline> -->
