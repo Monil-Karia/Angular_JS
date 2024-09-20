@@ -1,0 +1,7 @@
+<app-child-student (studentAdded)="addStudent($event)"></app-child-student>
+    <h2>Parent is working</h2>
+    <ul>
+      <li *ngFor="let student of students">
+        {{ student.name }} ({{ student.age }})
+      </li>
+</ul>
